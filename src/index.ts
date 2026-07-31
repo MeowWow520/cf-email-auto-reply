@@ -59,7 +59,7 @@ export default {
         await message.forward(forwardTo);
         console.log(`forwarded original to ${forwardTo}`);
       } catch (e) {
-        console.error(`forward to ${forwardTo} failed: ${e}`);
+        console.error(`forward to ${forwardTo} failed: ${(e as Error).message ?? e}`);
       }
     }
   },
