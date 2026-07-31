@@ -1,5 +1,6 @@
 import { shouldReply } from './shouldReply';
 import { renderReply, DEFAULT_TEXT_TEMPLATE, ReplyTemplates } from './reply';
+import { decodeEncodedWords } from './encodedWords';
 import htmlTemplate from '../REPLY/REPLY_HTML.txt';
 
 export interface Env {
@@ -30,7 +31,7 @@ export default {
       return;
     }
 
-    const originalSubject = message.headers.get('subject')?.trim() ?? '';
+    const originalSubject = decodeEncodedWords(message.headers.get('subject')?.trim() ?? '');
     const from = message.from;
     const subjectTemplate = env.REPLY_SUBJECT ?? 'Re: {{subject}}';
     const subject =
@@ -54,7 +55,7 @@ export default {
     console.log(`replied to ${from} for "${subject}"`);
 
     const forwardTo = env.FORWARD_TO?.trim();
-    console.log(`forward configured: ${forwardTo ? 'yes' : 'no'}`);
+    console.log(`forward configured: ${forwardTo ? 'yes' : 'no'} (rawSize=${message.rawSize})`);
     if (forwardTo) {
       try {
         await message.forward(forwardTo);
