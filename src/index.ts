@@ -1,5 +1,6 @@
 import { shouldReply } from './shouldReply';
-import { renderReply, DEFAULT_TEXT_TEMPLATE, DEFAULT_HTML_TEMPLATE, ReplyTemplates } from './reply';
+import { renderReply, DEFAULT_TEXT_TEMPLATE, ReplyTemplates } from './reply';
+import htmlTemplate from '../REPLY/REPLY_HTML.txt';
 
 export interface Env {
   REPLY_ADDRESS?: string;
@@ -36,7 +37,7 @@ export default {
 
     const templates: ReplyTemplates = {
       text: env.REPLY_TEXT ?? DEFAULT_TEXT_TEMPLATE,
-      html: env.REPLY_HTML ?? DEFAULT_HTML_TEMPLATE,
+      html: env.REPLY_HTML ?? htmlTemplate,
     };
     const { text, html } = renderReply(templates, { subject: originalSubject, from });
 

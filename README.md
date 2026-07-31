@@ -32,6 +32,10 @@ src/shouldReply.ts   # 防循环判断纯函数（有单测覆盖）
 src/reply.ts         # 模板渲染（纯文本 + HTML，{{subject}}/{{from}} 占位符）
 test/shouldReply.test.ts
 wrangler.toml        # Worker 配置与环境变量
+REPLY/REPLY_HTML.html  # HTML 回复模板（浏览器预览用，编辑后需同步）
+REPLY/REPLY_HTML.txt   # 打包进 Worker 的 HTML 模板副本（由脚本同步）
+REPLY/REPLY_TEXT.txt   # 纯文本模板草稿（实际配置在 wrangler.toml）
+REPLY/avatar.jpg       # 头像（经 jsDelivr CDN 引用）
 ```
 
 ## 本地开发
@@ -40,6 +44,7 @@ wrangler.toml        # Worker 配置与环境变量
 npm install
 npm run typecheck   # 类型检查
 npm test            # 单元测试
+npm run sync:template   # 编辑 REPLY_HTML.html 后同步到打包版 .txt
 ```
 
 > 注意：`wrangler dev` 无法在本地模拟 email 事件，端到端只能线上验证。
@@ -47,7 +52,7 @@ npm test            # 单元测试
 ## 部署
 
 ```bash
-npm run deploy          # 或 npx wrangler deploy
+npm run deploy          # 先同步模板再 npx wrangler deploy
 ```
 
 部署后配置 Email Routing：
@@ -66,4 +71,7 @@ npm run deploy          # 或 npx wrangler deploy
 | `REPLY_FROM_NAME` | `Auto Reply` | 回复邮件的发件人显示名 |
 | `REPLY_SUBJECT` | `Re: {{subject}}` | 回复邮件主题模板，`{{subject}}` 替换为原主题；原邮件无主题时固定为 `Auto-reply` |
 | `REPLY_TEXT` | 内置模板 | 纯文本模板，支持 `{{subject}}` / `{{from}}` 占位符 |
-| `REPLY_HTML` | 内置模板 | HTML 模板，支持同样的占位符（自动 HTML 转义） |
+
+> HTML 模板不通过变量配置（Cloudflare 单个变量上限 5.1 KB），改为**随代码打包**：
+> 编辑 `REPLY/REPLY_HTML.html` → 运行 `npm run sync:template` → 部署。
+> `src/index.ts` 通过 `import htmlTemplate from '../REPLY/REPLY_HTML.txt'` 引入。

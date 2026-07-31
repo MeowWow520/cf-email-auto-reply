@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "deploy": "wrangler deploy",
+    "deploy": "npm run sync:template && wrangler deploy",
+    "sync:template": "node scripts/sync-template.mjs",
     "dev": "wrangler dev",
     "tail": "wrangler tail",
     "test": "vitest run",
