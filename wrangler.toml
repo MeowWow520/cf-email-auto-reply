@@ -1,0 +1,14 @@
+name = "email-auto-reply"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+
+[vars]
+# 接收邮件的地址，Worker 只对该地址的来信自动回复
+REPLY_ADDRESS = "e-mail@meowwow520.cn"
+# 回复邮件的发件人显示名
+REPLY_FROM_NAME = "[Auto Reply] MeowWow520"
+# 回复邮件主题模板（支持 {{subject}} 占位符，默认 "Re: {{subject}}"）
+REPLY_SUBJECT = "Auto Reply: {{subject}}"
+# 可选：覆盖默认回复模板（支持 {{subject}} / {{from}} 占位符）
+# REPLY_TEXT = "..."
+# REPLY_HTML = "..."
