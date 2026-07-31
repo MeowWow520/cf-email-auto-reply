@@ -34,7 +34,7 @@
                     <table role="presentation" cellpadding="0" cellspacing="0">
                       <tr>
                         <td width="50" valign="middle" style="width:50px; padding-right:10px; line-height:0; font-size:0;">
-                          <svg aria-hidden="true" data-component="Octicon" height="36" viewBox="0 0 16 16" version="1.1" width="36" data-view-component="true" class="octicon octicon-reply" style="color:#58a6ff; vertical-align:middle;"><path fill="currentColor" d="M9.9 4.344a.75.75 0 0 1 0 1.06L8.306 7H10.5C13.836 7 16.5 9.664 16.5 13v.25a.75.75 0 0 1-1.5 0V13a4.5 4.5 0 0 0-4.5-4.5H8.306l1.594 1.596a.75.75 0 1 1-1.06 1.06L5.95 8.22a.749.749 0 0 1 0-1.06L8.84 4.344a.75.75 0 0 1 1.06 0Z"></path></svg>
+                          <img src="https://cdn.jsdelivr.net/gh/MeowWow520/cf-email-auto-reply@main/REPLY/icons/reply.png" width="36" height="36" alt="Reply" style="vertical-align:middle;">
                         </td>
                         <td valign="middle">
                           <table role="presentation" cellpadding="0" cellspacing="0">
@@ -92,25 +92,25 @@
                           <table role="presentation" cellpadding="0" cellspacing="0">
                             <tr>
                               <td width="20" valign="middle" style="width:20px; padding-bottom:4px;">
-                                <svg data-component="Octicon" class="octicon octicon-location" viewBox="0 0 16 16" version="1.1" width="14" height="14" aria-hidden="true" style="color:#8b949e; vertical-align:middle;"><path fill="currentColor" d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"></path></svg>
+                                <img src="https://cdn.jsdelivr.net/gh/MeowWow520/cf-email-auto-reply@main/REPLY/icons/location.png" width="14" height="14" alt="Location" style="vertical-align:middle;">
                               </td>
                               <td valign="middle" style="font-size:13px; font-size:clamp(13px, 1.3vw, 22px); color:#8b949e; padding-bottom:4px;">China</td>
                             </tr>
                             <tr>
                               <td width="20" valign="middle" style="width:20px; padding-bottom:4px;">
-                                <svg aria-hidden="true" data-component="Octicon" height="14" viewBox="0 0 16 16" version="1.1" width="14" data-view-component="true" class="octicon octicon-link" style="color:#8b949e; vertical-align:middle;"><path fill="currentColor" d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+                                <img src="https://cdn.jsdelivr.net/gh/MeowWow520/cf-email-auto-reply@main/REPLY/icons/link.png" width="14" height="14" alt="Website" style="vertical-align:middle;">
                               </td>
                               <td valign="middle" style="font-size:13px; font-size:clamp(13px, 1.3vw, 22px); padding-bottom:4px;"><a href="https://meowwow520.cn" style="color:#58a6ff; text-decoration:none;">meowwow520.cn</a></td>
                             </tr>
                             <tr>
                               <td width="20" valign="middle" style="width:20px; padding-bottom:4px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="14" height="14" role="img" aria-label="X" class="octicon" style="color:#8b949e; vertical-align:middle;"><path fill="currentColor" d="M9.332 6.925 14.544 1h-1.235L8.783 6.145 5.17 1H1l5.466 7.78L1 14.993h1.235l4.78-5.433 3.816 5.433H15L9.332 6.925ZM7.64 8.848l-.554-.775L2.68 1.91h1.897l3.556 4.975.554.775 4.622 6.466h-1.897L7.64 8.848Z"></path></svg>
+                                <img src="https://cdn.jsdelivr.net/gh/MeowWow520/cf-email-auto-reply@main/REPLY/icons/x.png" width="14" height="14" alt="X" style="vertical-align:middle;">
                               </td>
                               <td valign="middle" style="font-size:13px; font-size:clamp(13px, 1.3vw, 22px); padding-bottom:4px;"><a href="https://twitter.com/MeowWow520_" style="color:#58a6ff; text-decoration:none;">@MeowWow520_</a></td>
                             </tr>
                             <tr>
                               <td width="20" valign="middle" style="width:20px;">
-                                <svg aria-hidden="true" data-component="Octicon" height="14" viewBox="0 0 16 16" version="1.1" width="14" data-view-component="true" class="octicon octicon-mail" style="color:#8b949e; vertical-align:middle;"><path fill="currentColor" d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"></path></svg>
+                                <img src="https://cdn.jsdelivr.net/gh/MeowWow520/cf-email-auto-reply@main/REPLY/icons/mail.png" width="14" height="14" alt="Email" style="vertical-align:middle;">
                               </td>
                               <td valign="middle" style="font-size:13px; font-size:clamp(13px, 1.3vw, 22px);"><a href="mailto:e-mail@meowwow520.cn" style="color:#58a6ff; text-decoration:none;">e-mail@meowwow520.cn</a></td>
                             </tr>
