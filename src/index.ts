@@ -54,6 +54,7 @@ export default {
     console.log(`replied to ${from} for "${subject}"`);
 
     const forwardTo = env.FORWARD_TO?.trim();
+    console.log(`forward configured: ${forwardTo ? 'yes' : 'no'}`);
     if (forwardTo) {
       try {
         await message.forward(forwardTo);
