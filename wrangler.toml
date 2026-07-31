@@ -18,3 +18,7 @@ Thank you for your email. I will reply soon.
 
 Best regards
 """
+
+# 自动回复后，将原邮件转发到该地址（留空则不转发）
+# 注意：该地址需先在 Email Routing 的 Destination addresses 中验证
+FORWARD_TO = "Meow114514@outlook.com"
