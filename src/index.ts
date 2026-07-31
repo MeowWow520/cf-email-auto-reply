@@ -9,7 +9,6 @@ export interface Env {
   REPLY_SUBJECT?: string;
   REPLY_TEXT?: string;
   REPLY_HTML?: string;
-  FORWARD_TO?: string;
 }
 
 export default {
@@ -53,16 +52,5 @@ export default {
       html,
     });
     console.log(`replied to ${from} for "${subject}"`);
-
-    const forwardTo = env.FORWARD_TO?.trim();
-    console.log(`forward configured: ${forwardTo ? 'yes' : 'no'} (rawSize=${message.rawSize})`);
-    if (forwardTo) {
-      try {
-        await message.forward(forwardTo);
-        console.log(`forwarded original to ${forwardTo}`);
-      } catch (e) {
-        console.error(`forward to ${forwardTo} failed: ${(e as Error).message ?? e}`);
-      }
-    }
   },
 } satisfies ExportedHandler<Env>;
